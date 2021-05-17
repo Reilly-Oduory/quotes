@@ -5,8 +5,10 @@ import { Directive, ElementRef, Input } from '@angular/core';
 })
 export class ChangeBgDirective {
 
+  highlightQuote!: boolean;
 
   constructor(private elem:ElementRef) { 
+    this.highlightQuote = false;
     this.elem.nativeElement.style.background='yellow';
   }
 
