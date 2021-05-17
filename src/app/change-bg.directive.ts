@@ -16,9 +16,9 @@ export class ChangeBgDirective implements OnChanges{
 
   private changeBackground() {
     if(this.appChangeBg) {
-      this.elem.nativeElement.style.background='yellow';
+      this.elem.nativeElement.style.color='yellow';
     } else {
-      this.elem.nativeElement.style.background=''
+      this.elem.nativeElement.style.color=''
     }
   }
 }
