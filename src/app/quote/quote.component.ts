@@ -38,8 +38,12 @@ export class QuoteComponent implements OnInit {
     }
   }
 
-  highlight(index:number){
-      
+  highestUpvote() {
+      let highest = this.quotes.slice().sort((a,b) => b.upVote - a.upVote)[0];
+      if(highest) {
+        return highest.upVote;
+      }
+      return -1;
   }
 
   constructor() {  }
