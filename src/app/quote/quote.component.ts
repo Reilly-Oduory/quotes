@@ -38,7 +38,16 @@ export class QuoteComponent implements OnInit {
     }
   }
 
-  constructor() { }
+  constructor() {
+    let max = 0;
+    let maxId = 0;
+    this.quotes.forEach(quote => {
+      if(quote.upVote > max) {
+        max = quote.upVote;
+        maxId =quote.id
+      }
+    });
+   }
 
   ngOnInit(): void {
   }

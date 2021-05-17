@@ -4,7 +4,7 @@
         <div class="form-group">
             <label for="quote" class="text-info">Quote</label>
             <input class="form-control border border-info rounded-pill" type="text" required id="quote" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel">
-            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger"><p>Input cannot be blank</p></div>
+            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger"><p>Input cannot be blank</p></div> 
         </div>
         <div class="form-group">
             <label for="author" class="text-info">Author</label>
