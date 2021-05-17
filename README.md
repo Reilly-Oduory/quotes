@@ -2,7 +2,7 @@
 Week one IP
 
 ## Author
-[Reilly]https://github.com/Reilly-Oduory/
+[Reilly](https://github.com/Reilly-Oduory/)
 
 ### Technologies used
 - Angular 12
