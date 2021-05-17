@@ -1,17 +1,17 @@
 <div>
-    <h2>Add new quote</h2>
+    <h2 class="text-center text-capitalize">Add new quote</h2>
     <form (ngSubmit)='submit()' #quoteForm='ngForm'>
-        <div>
-            <label for="quote">Quote</label>
-            <input type="text" required id="quote" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel">
+        <div class="form-group">
+            <label for="quote" class="text-info">Quote</label>
+            <input class="form-control border border-info rounded-pill" type="text" required id="quote" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel">
             <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger"><p>Input cannot be blank</p></div>
-            {{newQuote.quote}}
         </div>
-        <div>
-            <label for="author">Author</label>
-            <input type="text" required id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel">
+        <div class="form-group">
+            <label for="author" class="text-info">Author</label>
+            <input class="form-control border border-info rounded-pill" type="text" required id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel">
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger"><p>Input cannot be blank</p></div>
         </div>
-        <button type="submit" class="btn btn-success">Add Quote</button>
+        <br>
+        <button type="submit" class=" mx-auto btn btn-success">Add Quote</button>
     </form>
 </div>

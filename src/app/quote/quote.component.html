@@ -1,21 +1,27 @@
 
-<div>
-    <div *ngFor='let quote of quotes;let i = index'>
-        <h4>{{ quote.quote | uppercase}}</h4>
-        <div id="userOpinion">
-            <button (click)='likeQuote(i)'>Upvote</button>
-            <button (click)='dislikeQuote(i)'>Downvote</button>
+<div class="row">
+    <div class="col-md-6">
+        <div *ngFor='let quote of quotes;let i = index'>
+            <h4>{{ quote.quote | uppercase}}</h4>
+            <div id="userOpinion" class="mb-3">
+                <button (click)='likeQuote(i)' class="btn btn-success">Upvote</button>
+                &nbsp;&nbsp;
+                <button (click)='dislikeQuote(i)' class="btn btn-danger">Downvote</button>
+            </div>
+            <button (click)='toggle(i)' class="btn btn-primary">More details</button>
+            <div *ngIf='quote.showDetails' class="mt-4">
+                <h6 class="mb-0">By {{ quote.author | uppercase}}</h6>
+                <p class="mb-0 text-success">Upvotes are {{ quote.upVote }}</p>
+                <p class="text-danger">Downvotes are {{ quote.downVote }}</p>
+                <button class="btn btn-warning bn-sn text-dark" (click)='quoteDelete(i)'>Delete Quote</button>
+            </div>
+            <hr>
+           
         </div>
-        <button (click)='toggle(i)'>More details</button>
-        <div *ngIf='quote.showDetails'>
-            <h6>By {{ quote.author }}</h6>
-            <p>Upvotes are {{ quote.upVote }}</p>
-            <p>Downvotes are {{ quote.downVote }}</p>
-        </div>
-       
+        <br>
     </div>
-    
-    <div>
+    <br>
+    <div class="col-md-6">
         <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
 </div>
