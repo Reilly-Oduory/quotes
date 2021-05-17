@@ -1,0 +1,21 @@
+
+<div>
+    <div *ngFor='let quote of quotes;let i = index'>
+        <h4>{{ quote.quote | uppercase}}</h4>
+        <div id="userOpinion">
+            <button (click)='likeQuote(i)'>Upvote</button>
+            <button (click)='dislikeQuote(i)'>Downvote</button>
+        </div>
+        <button (click)='toggle(i)'>More details</button>
+        <div *ngIf='quote.showDetails'>
+            <h6>By {{ quote.author }}</h6>
+            <p>Upvotes are {{ quote.upVote }}</p>
+            <p>Downvotes are {{ quote.downVote }}</p>
+        </div>
+       
+    </div>
+    
+    <div>
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    </div>
+</div>
