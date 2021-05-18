@@ -7,3 +7,7 @@ Week one IP
 ### Technologies used
 - Angular 12
 - Typescript
+
+## GHPAGES
+---
+[view-site](https://Reilly-Oduory.github.io/quotes)
